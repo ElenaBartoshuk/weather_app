@@ -146,7 +146,7 @@ img {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .current__item {
@@ -194,6 +194,15 @@ img {
   position: relative;
   width: 22%;
   background-color: #fff;
+}
+
+.feels__like {
+  padding-left: 15px;
+}
+
+.feels__like span {
+  font-weight: 500;
+  color: #0f0766;
 }
 
 .current__degrees {
@@ -282,7 +291,7 @@ img {
 
 .current__value {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 24px;
   color: #0f0766;
 }
 

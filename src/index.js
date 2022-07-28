@@ -151,7 +151,6 @@ celciusLink.addEventListener("click", displayCelcius);
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="forecast__items">`;
 
@@ -246,17 +245,14 @@ function displayWeatherCondition(response) {
   descriptionElement.innerHTML = description;
 
   let windSpeedElement = document.querySelector("#wind");
-  windSpeedElement.innerHMTL = `${windSpeed} km/h`;
-  console.log(windSpeedElement.innerHMTL);
-  console.log(windSpeedElement);
+  windSpeedElement.innerHTML = `${windSpeed} km/h`;
 
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHMTL = `${humidity}`;
-  console.log(humidityElement.innerHMTL);
+  humidityElement.innerHTML = `${humidity} %`;
 
   let feelsLikeElement = document.querySelector("#feelslike");
-  feelsLikeElement.innerHMTL = `${feelsLike} °C`;
-  console.log(feelsLikeElement.innerHMTL);
+  feelsLikeElement.innerHTML = `${feelsLike}°C`;
+  console.log(feelsLikeElement.innerHTML);
 
   // "<div class='feels__like'>Feels like<span id='feelslike'>${feelsLike} °C</span></div>";
 
@@ -317,4 +313,4 @@ currentBtn.addEventListener("click", getCurrentLocation);
 let unitsMetric = true;
 
 searchCity("Malaga");
-displayForecast();
+// displayForecast();
