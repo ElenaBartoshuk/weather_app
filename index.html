@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="src/styles.css">
+  <title>Weather app</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <form class="search" id="form">
+        <div class="icon__before">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="rgba(15, 7, 102, 0.8)"
+              d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
+          </svg>
+          <input type="search" id="city" placeholder="Enter a city" autofocus autocomplete="off" />
+        </div>
+        <button class="btn search-btn" id="search-btn" type="submit" autocomplete="off">Search</button>
+        <div class="current-btnicon">
+          <button class="btn current-btn" id="current-btn" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M11 11l1.256 5 3.744-10-10 3.75 5 1.25zm1-11c-5.522 0-10 4.395-10 9.815 0 5.505 4.375 9.268 10 14.185 5.625-4.917 10-8.68 10-14.185 0-5.42-4.478-9.815-10-9.815zm0 18c-4.419 0-8-3.582-8-8s3.581-8 8-8 8 3.582 8 8-3.581 8-8 8z" />
+            </svg>
+            Current</button>
+        </div>
+      </form>
+      <div class="current">
+        <h1 class="current__city" id="current-city"></h1>
+        <div class="current__date">
+        </div>
+        <div class="current__icon">
+          <img src="" alt="" id="icon">
+          <div class="curent__item-description" id="description"></div>
+        </div>
+        <div class="current__items">
+          <div class="current__item current__item-humidity">
+            Humidity:
+            <span class="current__value" id="humidity"></span>
+          </div>
+          <div class="current__item current__temperature">
+            <div class="current__degrees" id="degrees"></div>
+            <span class="units">
+              <a href="#" id="celcius-link">°C</a> |
+              <a href="#" id="fehrenheit-link">°F</a>
+            </span>
+            <div class="feels__like">Feels like
+              <span id="feelslike"></span>
+            </div>
+          </div>
+          <div class="current__item current__item-wind">
+            Wind speed:
+            <span class="current__value" id="wind"></span>
+          </div>
+        </div>
+      </div>
+      <div class="details">
+        <div class="details__row details__row-sun">
+          <div class="details__sunrise">Sunrise:
+            <span class="details__value" id="sunrise"></span>
+          </div>
+          <div class="details__sunset">Sunset:
+            <span class="details__value" id="sunset"></span>
+          </div>
+        </div>
+        <div class="details__row details__row-temp">
+          <div class="details__high-temp">High:
+            <span class="details__value" id="high-temp"></span>
+            °C
+          </div>
+          <div class="details__low-temp">Low:
+            <span class="details__value" id="low-temp"></span>
+            °C
+          </div>
+        </div>
+      </div>
+      <div class="forecast">
+        <div class="forecast__title">Next 5 days forecast:</div>
+        <div class="forecast__items" id="forecast">
+        </div>
+      </div>
+    </div>
+    <small class="author">
+      <a href="#" target="_blank">Open-source code</a>
+      by Elena Bartoshuk
+    </small>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
