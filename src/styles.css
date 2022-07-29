@@ -23,8 +23,8 @@ html {
   border: 1px solid #dadde1;
   border-radius: 20px;
   box-shadow: 0 0 20px rgb(0 0 0 / 20%);
-  background-color: rgba(252, 252, 252, 0.93);
-  margin-bottom: 5px;
+  background-color: rgba(252, 252, 252, 0.87);
+  margin-bottom: 7px;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
   line-height: 32px;
   color: #59057b;
   font-weight: 400;
-  background-image: url("../images/bg.jpeg");
+  background-image: url("../images/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -112,6 +112,7 @@ img {
   margin-left: 15px;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1);
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .btn:hover {
@@ -467,9 +468,9 @@ img {
 }
 
 .source__code {
-  background-color: rgba(252, 252, 252, 0.6);
+  background-color: rgba(252, 252, 252, 0.87);
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 7px 10px;
 }
 
 .source__code-link {
@@ -505,7 +506,7 @@ img {
     margin: 0;
   }
   .units {
-    left: 57%;
+    left: 58%;
   }
 }
 
