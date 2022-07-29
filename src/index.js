@@ -39,7 +39,7 @@ function formatDate(timestamp) {
 
   let currentDate = date.getDate();
 
-  let formattedDate = `<small>Updated</small>: ${day} ${hours}:${minutes} ${month} ${currentDate}`;
+  let formattedDate = `<small>Updated:</small> ${day} ${hours}:${minutes}, ${month} ${currentDate}`;
 
   return formattedDate;
 }
@@ -142,7 +142,7 @@ function displayCelcius(e) {
 
 let celciusTemp = null;
 
-let fehrenheitLink = document.querySelector("#fehrenheit-link");
+let fehrenheitLink = document.querySelector("#fahrenheit-link");
 fehrenheitLink.addEventListener("click", displayFehrenheit);
 // fehrenheitLink.addEventListener("click", getFehrenheitForecast);
 
@@ -152,7 +152,8 @@ celciusLink.addEventListener("click", displayCelcius);
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="forecast__items">`;
+  let forecastHTML = `<div class="forecast__title">Next 5 days forecast:</div>
+  <div class="forecast__items" id="forecast">`;
 
   forecast.forEach(function (forecastDay, index) {
     let tempMax = Math.round(forecastDay.temp.max);
@@ -252,9 +253,6 @@ function displayWeatherCondition(response) {
 
   let feelsLikeElement = document.querySelector("#feelslike");
   feelsLikeElement.innerHTML = `${feelsLike}°C`;
-  console.log(feelsLikeElement.innerHTML);
-
-  // "<div class='feels__like'>Feels like<span id='feelslike'>${feelsLike} °C</span></div>";
 
   let sunriseElement = document.querySelector("#sunrise");
   sunriseElement.innerHTML = formatSunrise(sunrise);
@@ -266,10 +264,10 @@ function displayWeatherCondition(response) {
   dateElement.innerHTML = formatDate(date);
 
   let highTempElement = document.querySelector("#high-temp");
-  highTempElement.innerHTML = highTemperature;
+  highTempElement.innerHTML = `${highTemperature}°`;
 
   let lowTempElement = document.querySelector("#low-temp");
-  lowTempElement.innerHTML = lowTemperature;
+  lowTempElement.innerHTML = `${lowTemperature}°`;
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("alt", description);

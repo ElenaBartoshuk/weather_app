@@ -15,6 +15,7 @@ html {
 .container {
   max-width: 1200px;
   margin: 50px auto;
+  padding: 0 30px;
 }
 
 .wrapper {
@@ -54,13 +55,15 @@ img {
 
 .search {
   margin: 20px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .search input {
   cursor: pointer;
   padding: 10px 15px;
   padding-left: 45px;
-  width: 50%;
+  width: 100%;
   border-radius: 30px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -78,6 +81,7 @@ img {
 .icon__before {
   position: relative;
   display: inline;
+  width: 50%;
 }
 
 .icon__before svg {
@@ -86,7 +90,7 @@ img {
   width: 20px;
   height: 20px;
   left: 16px;
-  top: 3px;
+  top: 30%;
 }
 
 .search input::placeholder {
@@ -116,7 +120,7 @@ img {
 }
 
 .current-btn {
-  padding-left: 44px;
+  padding-left: 43px;
 }
 
 .current-btnicon {
@@ -130,8 +134,8 @@ img {
   height: 23px;
   position: absolute;
   display: inline-block;
-  left: 30px;
-  top: 2px;
+  left: 20%;
+  top: 24%;
 }
 
 .current-btnicon svg path {
@@ -189,8 +193,7 @@ img {
   flex-direction: column;
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
   border-radius: 45px;
-  padding: 35px 15px 25px 0;
-  padding-bottom: -10px;
+  padding: 35px 15px 15px 0;
   position: relative;
   width: 22%;
   background-color: #fff;
@@ -251,7 +254,7 @@ img {
 
 .current__date {
   font-size: 24px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .current__icon {
@@ -263,12 +266,12 @@ img {
 
 .current__icon img {
   width: 17%;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .curent__item-description {
   position: absolute;
-  right: 5%;
+  right: 2%;
   top: 39%;
   color: #0f0766;
   font-weight: 500;
@@ -301,6 +304,7 @@ img {
 
 .details__row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -462,12 +466,343 @@ img {
   line-height: 20px;
 }
 
-small a {
-  color: #e01171;
-  text-decoration: none;
-}
-.author {
+.source__code {
   background-color: rgba(252, 252, 252, 0.6);
   border-radius: 10px;
   padding: 5px 10px;
+}
+
+.source__code-link {
+  color: #e01171;
+  text-decoration: none;
+  padding-left: 29px;
+  position: relative;
+}
+
+.source__code-link:hover {
+  color: #0f0766;
+}
+
+.source__code-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 23px;
+}
+
+.source__code-img path {
+  fill: #0f0766;
+}
+
+.source__code-img:hover path {
+  fill: #e01171;
+}
+
+@media (max-width: 1200px) {
+  .current__item {
+    width: 27%;
+    margin: 0;
+  }
+  .units {
+    left: 57%;
+  }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    padding: 30px;
+  }
+  .search {
+    margin: 20px 0 30px;
+  }
+  .curent__item-description {
+    position: static;
+    margin-bottom: 15px;
+  }
+
+  .current__icon img {
+    width: 25%;
+  }
+  .curent__item-description::before {
+    bottom: 15px;
+    left: 23%;
+    top: auto;
+  }
+  .current__item {
+    width: 35%;
+  }
+
+  .current__temperature {
+    margin-right: 35px;
+  }
+
+  .current__item-humidity::before {
+    left: 17px;
+  }
+  .current__item-wind::before {
+    left: -3px;
+  }
+  .details {
+    margin-bottom: 30px;
+  }
+  .forecast__item + .forecast__item {
+    margin-left: 0;
+  }
+  .forecast__temperature {
+    font-size: 20px;
+  }
+  .forecast__temperature-low {
+    margin-left: 20px;
+  }
+  .forecast__precipitation-value {
+    display: block;
+  }
+}
+
+@media (max-width: 840px) {
+  .curent__item-description::before {
+    left: 18%;
+  }
+  .forecast__items {
+    justify-content: space-between;
+    gap: 5px;
+  }
+  .forecast__icon {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .search input::placeholder {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+
+  .current__city {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .current__date {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .curent__item-description,
+  .current__item-humidity,
+  .current__item-wind,
+  .current__value,
+  .feels__like,
+  .feels__like span {
+    font-size: 20px;
+  }
+  #fahrenheit-link {
+    padding-left: 1px;
+  }
+
+  .current__temperature {
+    width: 40%;
+  }
+
+  .current__item-humidity::before {
+    left: 10px;
+  }
+  .current__item-wind::before {
+    left: -7px;
+  }
+}
+
+@media (max-width: 640px) {
+  .icon__before {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-btn {
+    margin-left: 0;
+  }
+  .current__icon img {
+    width: 35%;
+  }
+  .curent__item-description::before {
+    left: 13%;
+  }
+  .current__items {
+    flex-direction: column;
+  }
+
+  .current__item {
+    width: 80%;
+    margin-bottom: 14px;
+  }
+  .current__value {
+    font-size: 20px;
+  }
+
+  .current__item-humidity span,
+  .current__item-wind span {
+    display: inline-block;
+  }
+
+  .current__item-humidity::before {
+    left: 20%;
+    top: 0;
+  }
+
+  .current__item-wind::before {
+    left: 13%;
+    top: 0;
+  }
+
+  .current {
+    margin-bottom: 0;
+  }
+
+  .current__temperature {
+    width: 50%;
+    margin-right: 0;
+  }
+
+  .forecast__title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .forecast__items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .forecast__item {
+    width: 45%;
+    margin-bottom: 10px;
+  }
+  .forecast__temperature,
+  .forecast__date,
+  .forecast__description {
+    margin-bottom: 5px;
+  }
+  .forecast__icon {
+    width: 70px;
+    height: 70px;
+  }
+  .forecast__temperature-low {
+    margin-left: 25px;
+  }
+  .forecast__precipitation-value {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    font-size: 18px;
+  }
+
+  .details__row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details__sunrise,
+  .details__high-temp {
+    margin-bottom: 10px;
+  }
+
+  .details__row-sun {
+    margin-bottom: 20px;
+  }
+
+  .details__sunset {
+    margin-left: 0px;
+  }
+  .details__high-temp {
+    margin-right: 0px;
+  }
+
+  .current__icon img {
+    width: 40%;
+  }
+
+  .curent__item-description::before {
+    left: -2%;
+  }
+
+  .current__item-humidity::before {
+    left: 10%;
+  }
+  .current__item-wind::before {
+    left: 0;
+  }
+  .current__temperature {
+    width: 65%;
+  }
+  .forecast__temperature {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 425px) {
+  small {
+    display: block;
+  }
+  .current__date {
+    font-size: 18px;
+  }
+
+  .current__icon img {
+    width: 50%;
+  }
+  .curent__item-description::before {
+    display: none;
+  }
+  .current__item-humidity::before,
+  .current__item-wind::before {
+    display: none;
+  }
+  .current__temperature {
+    width: 75%;
+  }
+  .forecast__item {
+    width: 75%;
+  }
+}
+
+@media (max-width: 375px) {
+  .btn {
+    padding: 5px 10px;
+  }
+
+  .search input {
+    font-size: 16px;
+  }
+
+  .current-btn {
+    padding-left: 30px;
+    margin-left: 13px;
+  }
+  .current-btnicon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .curent__item-description {
+    font-size: 16px;
+  }
+  .current__value {
+    font-size: 18px;
+  }
+  .current__item {
+    width: 100%;
+  }
 }
