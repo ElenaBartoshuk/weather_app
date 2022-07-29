@@ -71,6 +71,7 @@ img {
   border-color: rgba(15, 7, 102, 0.7);
   background: #fff;
   transition: all 0.15s;
+  -webkit-touch-callout: none;
 }
 
 .search input:focus {
@@ -219,8 +220,8 @@ img {
 .units {
   display: flex;
   position: absolute;
-  right: 20px;
-  top: 14px;
+  left: 58%;
+  top: 17px;
 }
 
 .units a {
@@ -244,6 +245,10 @@ img {
 .units a.active:hover {
   text-decoration: underline;
   color: #e01171;
+}
+
+#fahrenheit-link {
+  padding-left: 1px;
 }
 
 .current__city {
@@ -505,9 +510,6 @@ img {
     width: 27%;
     margin: 0;
   }
-  .units {
-    left: 58%;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -608,9 +610,6 @@ img {
   .feels__like,
   .feels__like span {
     font-size: 20px;
-  }
-  #fahrenheit-link {
-    padding-left: 1px;
   }
 
   .current__temperature {
