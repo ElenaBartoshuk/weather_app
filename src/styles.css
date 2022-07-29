@@ -13,24 +13,24 @@ html {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 50px auto;
+  max-width: 950px;
+  margin: 40px auto;
   padding: 0 30px;
 }
 
 .wrapper {
-  padding: 30px 70px 50px;
+  padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 20px;
   box-shadow: 0 0 20px rgb(0 0 0 / 20%);
-  background-color: rgba(252, 252, 252, 0.87);
+  background-color: rgba(252, 252, 252, 0.8);
   margin-bottom: 7px;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
-  line-height: 32px;
+  line-height: 26px;
   color: #59057b;
   font-weight: 400;
   background-image: url("../images/bg.jpg");
@@ -54,7 +54,7 @@ img {
 }
 
 .search {
-  margin: 20px 0 40px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -69,9 +69,12 @@ img {
   font-size: 18px;
   color: #0f0766;
   border-color: rgba(15, 7, 102, 0.7);
-  background: #fff;
+  background: rgba(252, 252, 252, 0.8);
   transition: all 0.15s;
-  -webkit-touch-callout: none;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
 }
 
 .search input:focus {
@@ -95,7 +98,7 @@ img {
 }
 
 .search input::placeholder {
-  color: rgba(15, 7, 102, 0.5);
+  color: rgba(15, 7, 102, 0.6);
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
 }
@@ -157,7 +160,7 @@ img {
 
 .current__item {
   margin: 0 15px;
-  width: 25%;
+  width: 27%;
 }
 
 .current__item-humidity span,
@@ -198,7 +201,7 @@ img {
   padding: 35px 15px 15px 0;
   position: relative;
   width: 22%;
-  background-color: #fff;
+  background-color: rgba(252, 252, 252, 0.8);
 }
 
 .feels__like {
@@ -271,7 +274,7 @@ img {
 }
 
 .current__icon img {
-  width: 17%;
+  width: 15%;
   margin: 5px auto;
 }
 
@@ -305,7 +308,7 @@ img {
 }
 
 .details {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .details__row {
@@ -392,12 +395,13 @@ img {
   color: #0f0766;
   margin-bottom: 20px;
   font-weight: 500;
+  text-align: center;
 }
 
 .forecast__items {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
 }
 
 .forecast__item {
@@ -411,9 +415,9 @@ img {
   border-radius: 20px;
   padding: 15px 20px;
   transition: all 0.4s;
-  background-color: #fff;
+  background-color: rgba(252, 252, 252, 0.8);
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-  width: 17%;
+  width: 19%;
 }
 
 .forecast__item + .forecast__item {
@@ -421,7 +425,7 @@ img {
 }
 
 .forecast__item:hover {
-  transform: scale(1.13);
+  transform: scale(1.07);
 }
 
 .forecast__day,
@@ -473,7 +477,7 @@ img {
 }
 
 .source__code {
-  background-color: rgba(252, 252, 252, 0.87);
+  background-color: rgba(252, 252, 252, 0.8);
   border-radius: 10px;
   padding: 7px 10px;
 }
@@ -507,29 +511,16 @@ img {
 
 @media (max-width: 1200px) {
   .current__item {
-    width: 27%;
     margin: 0;
   }
 }
 
-@media (max-width: 1024px) {
-}
-
 @media (max-width: 992px) {
-  .wrapper {
-    padding: 30px;
-  }
-  .search {
-    margin: 20px 0 30px;
-  }
   .curent__item-description {
     position: static;
     margin-bottom: 15px;
   }
 
-  .current__icon img {
-    width: 25%;
-  }
   .curent__item-description::before {
     bottom: 15px;
     left: 23%;
@@ -549,9 +540,7 @@ img {
   .current__item-wind::before {
     left: -3px;
   }
-  .details {
-    margin-bottom: 30px;
-  }
+
   .forecast__item + .forecast__item {
     margin-left: 0;
   }
@@ -634,7 +623,7 @@ img {
     margin-left: 0;
   }
   .current__icon img {
-    width: 35%;
+    width: 25%;
   }
   .curent__item-description::before {
     left: 13%;
@@ -675,15 +664,11 @@ img {
     margin-right: 0;
   }
 
-  .forecast__title {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
   .forecast__items {
     flex-direction: column;
     align-items: center;
   }
+
   .forecast__item {
     width: 45%;
     margin-bottom: 10px;
@@ -731,10 +716,6 @@ img {
     margin-right: 0px;
   }
 
-  .current__icon img {
-    width: 40%;
-  }
-
   .curent__item-description::before {
     left: -2%;
   }
@@ -762,8 +743,9 @@ img {
   }
 
   .current__icon img {
-    width: 50%;
+    width: 30%;
   }
+
   .curent__item-description::before {
     display: none;
   }

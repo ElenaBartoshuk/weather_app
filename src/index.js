@@ -281,7 +281,7 @@ function handleSubmit(e) {
   let city = document.querySelector("#city").value;
   if (city) {
     searchCity(city);
-    // document.querySelector("#city").value = "";
+    document.querySelector("#city").value = "";
   } else {
     alert(`🙌 Please enter a city`);
   }
@@ -291,14 +291,13 @@ function error(error) {
   let city = document.querySelector("#city").value;
   console.log(city);
   if (error) {
-    alert(
-      `🖍 Please check the spelling of city "${
-        city.charAt(0).toUpperCase() + city.slice(1)
-      }" name and type it again`
-    );
+    alert(`🖍 Please check the spelling of city name and type it again`);
     document.querySelector("#city").value = "";
   }
 }
+// "${
+//         city.charAt(0).toUpperCase() + city.slice(1)
+//       }"
 
 function getCurrentLocation(event) {
   event.preventDefault();
