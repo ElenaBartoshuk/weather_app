@@ -138,7 +138,7 @@ function displayFahrenheit(e) {
   let fahrenheitTempFeelsLike = Math.round((feelsLike * 9) / 5 + 32);
 
   temp.innerHTML = fahrenheitTempMain;
-  feelsLikeElement.innerHTML = `${fahrenheitTempFeelsLike}°F`;
+  feelsLikeElement.innerHTML = `${fahrenheitTempFeelsLike}°`;
   highTempElement.innerHTML = `${fahrenheitTempMax}°`;
   lowTempElement.innerHTML = `${fahrenheitTempMin}°`;
 
