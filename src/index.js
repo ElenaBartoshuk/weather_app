@@ -246,7 +246,7 @@ function displayWeatherCondition(response) {
   descriptionElement.innerHTML = description;
   windSpeedElement.innerHTML = `${windSpeed} m/s`;
   humidityElement.innerHTML = `${humidity} %`;
-  feelsLikeElement.innerHTML = `${feelsLike}°C`;
+  feelsLikeElement.innerHTML = `${feelsLike}°`;
   sunriseElement.innerHTML = formatSunrise(sunrise);
   sunsetElement.innerHTML = formatSunset(sunset);
   dateElement.innerHTML = formatDate(date);
