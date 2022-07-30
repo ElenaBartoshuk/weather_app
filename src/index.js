@@ -257,6 +257,10 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("src", `images/${icon}.png`);
   iconElement.setAttribute("width", `100%`);
 
+  if (response.status === 200) {
+    document.querySelector("#city").value = "";
+  }
+
   coords = response.data.coord;
   getForecast(coords, "metric");
 }
@@ -273,21 +277,8 @@ function searchCity(city) {
   let apiKey = "29d24da46731d2929ff30f83f29c34d7";
   let units = "metric";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+
   axios.get(url).then(displayWeatherCondition).catch(error);
-}
-
-function handleSubmit(e) {
-  e.preventDefault();
-  let city = document.querySelector("#city").value;
-
-  if (city) {
-    searchCity(city);
-    if (!error) {
-      document.querySelector("#city").value = "";
-    }
-  } else {
-    alert(`🙌 Please enter a city`);
-  }
 }
 
 function error(error) {
@@ -299,6 +290,17 @@ function error(error) {
       }" name and type it again`
     );
     document.querySelector("#city").value = "";
+  }
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  let city = document.querySelector("#city").value;
+
+  if (city) {
+    searchCity(city);
+  } else {
+    alert(`🙌 Please enter a city`);
   }
 }
 
